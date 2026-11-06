@@ -21,6 +21,7 @@ namespace ISIP424_Shornikova.WPF
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Page1(this));
         }
     }
 }
