@@ -1,0 +1,37 @@
+﻿<Page x:Class="ISIP424_Shornikova.WPF.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISIP424_Shornikova.WPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Выберите модель автомобиля:" FontWeight="Bold" />
+            <ComboBox x:Name="CmbModels" SelectionChanged="CmbModels_SelectionChanged">
+                <ComboBoxItem Content="Lada Vesta (База: 1 500 000 руб.)" />
+                <ComboBoxItem Content="Kia Rio (База: 2 000 000 руб.)" />
+                <ComboBoxItem Content="Toyota Camry (База: 3 500 000 руб.)" />
+            </ComboBox>
+
+            <TextBlock Text="Выберите тип двигателя:" FontWeight="Bold" />
+            <StackPanel x:Name="EnginePanel">
+
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Row="1"
+                Content="Далее"
+                HorizontalAlignment="Right"
+                Width="150
+                Click="BtnNext_Click" />
+    </Grid>
+</Page>
