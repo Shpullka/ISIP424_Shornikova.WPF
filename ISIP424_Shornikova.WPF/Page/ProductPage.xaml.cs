@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace ISIP424_Shornikova.WPF.Page
 {
-    /// <summary>
-    /// Логика взаимодействия для ProductPage.xaml
-    /// </summary>
     public partial class ProductPage : Page
     {
         public ProductPage()
