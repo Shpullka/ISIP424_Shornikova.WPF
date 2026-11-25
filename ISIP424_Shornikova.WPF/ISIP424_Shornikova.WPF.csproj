@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,6 +65,46 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Context\CinemaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CinemaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CinemaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Genre.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Hall.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Movie.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Seat.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Session.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\sysdiagrams.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Ticket.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\User.cs">
+      <DependentUpon>CinemaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Core.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -86,6 +128,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Context\CinemaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CinemaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Context\CinemaModel.edmx.diagram">
+      <DependentUpon>CinemaModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +143,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Context\CinemaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CinemaModel.Context.cs</LastGenOutput>
+      <DependentUpon>CinemaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Context\CinemaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CinemaModel.edmx</DependentUpon>
+      <LastGenOutput>CinemaModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
