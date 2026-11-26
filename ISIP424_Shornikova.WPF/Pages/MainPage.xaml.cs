@@ -74,18 +74,18 @@ namespace ISIP424_Shornikova.WPF.Pages
         }
         private void AuthBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AuthPage());
+            //NavigationService.Navigate(new AuthPage());
         }
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
         {
             if (Core.IsAuthorized == true)
             {
-                NavigationService.Navigate(new ProfilePage());
+                //NavigationService.Navigate(new ProfilePage());
             }
             else
             {
-                MessageBox.Show("Сначала войдите в аккаунт!");
-                NavigationService.Navigate(new AuthPage());
+                MessageBox.Show("Сначала войдите в аккаунт!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                //NavigationService.Navigate(new AuthPage());
             }
         }
     }

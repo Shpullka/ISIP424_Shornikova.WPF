@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using ISIP424_Shornikova.WPF.Pages;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
